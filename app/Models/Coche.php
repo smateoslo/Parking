@@ -9,18 +9,6 @@ class Coche extends Model
 {
     use HasFactory;
 
-    protected $coche = 'coche';
-
     protected $fillable = ['matricula', 'marca', 'modelo'];
-
-    protected $hidden = ['id'];
-
-    
-public function obtenerCoche(){
-    return coche::all();
-}
-public function obtenerCocheId($id){
-    return coche::find($id);
-}
 
 }

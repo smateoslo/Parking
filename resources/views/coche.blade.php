@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,11 @@
     />
     <title>Coche</title>
 </head>
+<header>
+    @yield('nav')
+</header>
 <body>
-    @yield('cuerpo')
+    @yield('nuevoCoche')
+    @yield('listaCoches')
 </body>
 </html>

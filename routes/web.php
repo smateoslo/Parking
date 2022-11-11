@@ -14,7 +14,12 @@ use \App\Http\Controllers\CocheController;
 |
 */
 
-Route::get('/', [CocheController::class, 'index']);
+//Route::get('/', [CocheController::class, 'index']);
 Route::post('/coche', [CocheController::class, 'store']);
+
+Route::get('/listaCoches', [CocheController::class, 'listaCoches']);
+Route::get('/', [CocheController::class, 'nuevoCoche']);
+
+
 Route::delete('/coche/{id}', [CocheController::class, 'eleminarCoche']);
 
