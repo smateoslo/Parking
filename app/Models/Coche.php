@@ -9,6 +9,9 @@ class Coche extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['matricula', 'marca', 'modelo'];
+    protected $fillable = ['matricula', 'marca', 'modelo', 'user_id'];
 
+    public function usuarios(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

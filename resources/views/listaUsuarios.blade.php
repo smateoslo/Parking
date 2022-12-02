@@ -18,21 +18,12 @@
   <li class="nav-item">
     <a class="nav-link" href="{{url('/inicioAsignar')}}">Asignar usuario</a>
   </li>
-  <li>
-    <form action="/listaCoches" method="get">
-      @csrf
-    <div class="input-group">
-        <input type="search" name="buscador" class="form-control rounded" placeholder="Matricula" aria-label="Search" aria-describedby="search-addon" value=""/>
-        <button type="submit" class="btn btn-outline-primary">Buscar</button>
-    </div>
-    </form>
-</li>
 </ul>
 </nav>
 @endsection
 
 
-@section('listaCoches')
+@section('listaUsuarios')
 
 <section  style="background-color: #eee;">
 <div class="container py-5 h-100">
@@ -45,25 +36,18 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Matricula</th>
-                  <th scope="col">Marca</th>
-                  <th scope="col">Modelo</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Correo</th>
                 </tr>
               </thead>
               <tbody>
-              @foreach($coches as $coche)
+              @foreach($usuarios as $usuario)
                 <tr>
-                  <th scope="row">{{$coche->id}}</th>
-                  <td>{{$coche->matricula}}</td>
-                  <td>{{$coche->marca}}</td>
-                  <td>{{$coche->modelo}}</td>
-                  <td>
-                    <form action="{{url('/coche/'.$coche->id)}}" method="post">
-                    @csrf
-                    {{ method_field('DELETE') }}
-                    <input type="submit" onclick="return confirm('Seguro que quieres eliminar el coche?')"  class="btn btn-danger" value="Eliminar"></input>
-                    </form>
-                </td>
+                  <th scope="row">{{$usuario->id}}</th>
+                  <td>{{$usuario->name}}</td>
+                  <td>{{$usuario->apellido}}</td>
+                  <td>{{$usuario->email}}</td>
                 </tr>
                 @endforeach
               </tbody>

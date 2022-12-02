@@ -26,5 +26,8 @@
 <body>
     @yield('nuevoCoche')
     @yield('listaCoches')
+    @yield('listaUsuarios')
+    @yield('crearUsuario')
+    @yield('asignar')
 </body>
 </html>

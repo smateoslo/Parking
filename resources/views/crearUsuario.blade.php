@@ -24,9 +24,7 @@
 </nav>
 @endsection
 
-
-
-@section('nuevoCoche')
+@section('crearUsuario')
 
 <section style="background-color: #eee;">
   <div class="container py-5 h-100">
@@ -35,31 +33,22 @@
         <div class="card rounded-3">
           <div class="card-body p-4">
 
-            <h4 class="text-center my-3 pb-3">Coches</h4>
+            <h4 class="text-center my-3 pb-3">Crear usuario</h4>
 
-            <form action="{{ url('/coche') }}" method="post" class="row justify-content-center align-items-center mb-4 pb-2">
+            <form action="{{ url('/crearUsuario') }}" method="post" class="row justify-content-center align-items-center mb-4 pb-2">
                 @csrf
               <div class="col-12">
                 <div class="form-outline">
-                <label class="form-label">Matricula:</label>
-                  <input type="text" id="matricula" name="matricula" class="form-control" />
-                  @error('matricula')
-                  <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                <label class="form-label">Nombre:</label>
+                  <input type="text" id="name" name="name" class="form-control" />
                 </div>
                 <div class="form-outline">
-                <label class="form-label" >Marca:</label>
-                  <input type="text" id="marca" name="marca" class="form-control" />
-                  @error('marca')
-                  <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                <label class="form-label" >Apellido:</label>
+                  <input type="text" id="apellido" name="apellido" class="form-control" />
                 </div>
                 <div class="form-outline">
-                <label class="form-label">Modelo:</label>
-                  <input type="text" id="modelo" name="modelo" class="form-control" />
-                  @error('modelo')
-                  <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                <label class="form-label" >Correo:</label>
+                  <input type="email" id="email" name="email" class="form-control" />
                 </div>
               </div>
               <div class="col-12">
