@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\CocheController;
 use App\Http\Controllers\AsignarController;
 use \App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\BusquedaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::get('/listaUsuarios' , [UsuarioController::class, 'listaUsuario']);
 
 Route::get('/inicioAsignar' , [AsignarController::class, 'inicio']);
 Route::post('/asignar' , [AsignarController::class, 'asignar']);
+
+Route::get('/inicioBusqueda' , [BusquedaController::class, 'inicio']);
+Route::get('/busqueda' , [BusquedaController::class, 'buscar']);
+Route::post('/listaCocheUsuario' , [BusquedaController::class, 'listaCocheUsuario']);

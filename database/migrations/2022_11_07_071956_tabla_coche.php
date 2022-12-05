@@ -19,7 +19,7 @@ return new class extends Migration
             $table->String('matricula');
             $table->String('marca');
             $table->String('modelo');
-            $table->unsignedBigInteger('user_id')->unique()->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }

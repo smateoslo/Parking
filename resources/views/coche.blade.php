@@ -29,5 +29,6 @@
     @yield('listaUsuarios')
     @yield('crearUsuario')
     @yield('asignar')
+    @yield('busqueda')
 </body>
 </html>

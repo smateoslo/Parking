@@ -18,6 +18,9 @@
   <li class="nav-item">
     <a class="nav-link" href="{{url('/inicioAsignar')}}">Asignar usuario</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{url('/inicioBusqueda')}}">Busqueda Abanzada</a>
+  </li>
 </ul>
 </nav>
 @endsection
