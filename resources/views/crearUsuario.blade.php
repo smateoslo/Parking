@@ -38,23 +38,32 @@
                 <div class="form-outline">
                 <label class="form-label">Nombre:</label>
                   <input type="text" id="name" name="name" class="form-control" />
+<<<<<<< HEAD
                   @error('name')
                   <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
+=======
+>>>>>>> 272b3301f41788359a99eefea93f2319bd7adb9e
                 </div>
                 <div class="form-outline">
                 <label class="form-label" >Apellido:</label>
                   <input type="text" id="apellido" name="apellido" class="form-control" />
+<<<<<<< HEAD
                   @error('apellido')
                   <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
+=======
+>>>>>>> 272b3301f41788359a99eefea93f2319bd7adb9e
                 </div>
                 <div class="form-outline">
                 <label class="form-label" >Correo:</label>
                   <input type="email" id="email" name="email" class="form-control" />
+<<<<<<< HEAD
                   @error('email')
                   <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
+=======
+>>>>>>> 272b3301f41788359a99eefea93f2319bd7adb9e
                 </div>
               </div>
               <div class="col-12">
@@ -67,6 +76,7 @@
     </div>
   </div>
   </section>
+<<<<<<< HEAD
 @endsection
 
 @section('listaUsuarios')
@@ -104,4 +114,6 @@
     </div>
   </div>
 </section>
+=======
+>>>>>>> 272b3301f41788359a99eefea93f2319bd7adb9e
 @endsection
